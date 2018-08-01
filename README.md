@@ -84,7 +84,7 @@ So here again we know the length of the joints and calculate the length of the r
 
 ![image4]
 
-So we simple do the same process of finding the angle based on a triangle where the angle we want represents the difference in rotation between our current gripper orientation and the target gripper orientation.
+So we repeat the same process of finding the angle based on a triangle where the angle we want represents the difference in rotation between our current gripper orientation and the target gripper orientation.
 
 
 ### Project Implementation
