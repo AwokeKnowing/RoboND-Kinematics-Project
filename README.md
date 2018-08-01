@@ -2,18 +2,6 @@
 <img src="pickplace20x.gif" width="960" />
 ---
 
-
-**Steps to complete the project:**  
-
-
-1. Set up your ROS Workspace.
-2. Download or clone the [project repository](https://github.com/udacity/RoboND-Kinematics-Project) into the ***src*** directory of your ROS Workspace.  
-3. Experiment with the forward_kinematics environment and get familiar with the robot.
-4. Launch in [demo mode](https://classroom.udacity.com/nanodegrees/nd209/parts/7b2fd2d7-e181-401e-977a-6158c77bf816/modules/8855de3f-2897-46c3-a805-628b5ecf045b/lessons/91d017b1-4493-4522-ad52-04a74a01094c/concepts/ae64bb91-e8c4-44c9-adbe-798e8f688193).
-5. Perform Kinematic Analysis for the robot following the [project rubric](https://review.udacity.com/#!/rubrics/972/view).
-6. Fill in the `IK_server.py` with your Inverse Kinematics code. 
-
-
 [//]: # (Image References)
 
 [image1]: ./layoutwithoffsetsandangles.png
@@ -82,6 +70,12 @@ By having this entire homogeneous transfrom from the base to the end effector po
 
 
 #### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
+
+Although there are quite a few joints in the system, solving the inverse kinematics for this particular robot arm structure can be broken down into several smaller tasks that can be computed simply.  Here are the 'short cuts' that let us solve the problem easily.
+
+1. the arm is basically all in one plane, so if we just rotate the base to be in line with where the gripper position should be, then we can solve a 2D problem.
+2. If we ignore the gripper and just place the first joints so that they end within 1 gripper-length of the target, we can can simply calculate the angle on a triangle where the base points are defined the the 1st and 3rd joint coordinatesare anywhere 
+2. If we consider the seqence of physical joints at the gripper as a 'ball' joint
 
 And here's where you can draw out and show your math for the derivation of your theta angles. 
 
