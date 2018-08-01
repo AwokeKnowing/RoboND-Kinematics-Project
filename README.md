@@ -64,7 +64,7 @@ T0_EE = T0_1 * T1_2 * T2_3 * T3_4 * T4_5 * T5_6 * T6_EE
 By having this entire homogeneous transfrom from the base to the end effector position, we can then calculate where the gripper will be (relative to the base) for any rotation of of the joints.  So given join rotations and the world position, we know where in the world the gripper is, and in what orientation it is in.  This will be used to solve the Inverse Kinematics problem, where we specify where we would 'like' the gripper to be, and calculate a set of joint rotations that would result in the griper arriving at that location.
 
 
-#### 3. Decouple Inverse Kinematics problem into Inverse Position Kinematics and inverse Orientation Kinematics; doing so derive the equations to calculate all individual joint angles.
+#### Inverse Kinematics
 
 Although there are quite a few joints in the system, solving the inverse kinematics for this particular robot arm structure can be broken down into several smaller tasks that can be computed simply.  Here are the 'short cuts' that let us solve the problem easily.
 
